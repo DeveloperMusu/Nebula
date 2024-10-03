@@ -201,3 +201,8 @@ body {
         height: 3px;
     }
 }
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .DEVELOPER {
+        font-size: 3rem;
+    }
