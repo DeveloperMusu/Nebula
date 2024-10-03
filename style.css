@@ -321,3 +321,179 @@ body {
         padding: 8px 15px;
     }
 }
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #0f0f2d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Neon Animated Background */
+@keyframes neon-blue-bg {
+    0% {
+        background: radial-gradient(circle, #001b33, #000633, #001b33);
+    }
+    50% {
+        background: radial-gradient(circle, #003366, #004488, #0055bb);
+    }
+    100% {
+        background: radial-gradient(circle, #001b33, #000633, #001b33);
+    }
+}
+
+body {
+    animation: neon-blue-bg 5s infinite alternate;
+    background-size: cover;
+}
+
+/* Coming Soon Text */
+.coming-soon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    color: white;
+}
+
+.coming-soon-text {
+    font-size: 5rem;
+    color: #00ccff;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    animation: glow 2s ease-in-out infinite, fadeIn 3s ease;
+}
+
+/* Neon Glow Animation */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff, 0 0 30px #00ccff, 0 0 40px #00ccff;
+    }
+    50% {
+        text-shadow: 0 0 20px #00ccff, 0 0 30px #00ccff, 0 0 50px #00ccff, 0 0 70px #00ccff;
+    }
+    100% {
+        text-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff, 0 0 30px #00ccff, 0 0 40px #00ccff;
+    }
+}
+
+/* Fade-in Effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive Text */
+@media (max-width: 768px) {
+    .coming-soon-text {
+        font-size: 3rem;
+        letter-spacing: 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    .coming-soon-text {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+}
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #0f0f2d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Neon Animated Background */
+@keyframes neon-blue-bg {
+    0% {
+        background: radial-gradient(circle, #001b33, #000633, #001b33);
+    }
+    50% {
+        background: radial-gradient(circle, #003366, #004488, #0055bb);
+    }
+    100% {
+        background: radial-gradient(circle, #001b33, #000633, #001b33);
+    }
+}
+
+body {
+    animation: neon-blue-bg 5s infinite alternate;
+    background-size: cover;
+}
+
+/* Coming Soon Text */
+.coming-soon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    color: white;
+}
+
+.coming-soon-text {
+    font-size: 5rem;
+    color: #00ccff;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    animation: glow 2s ease-in-out infinite, fadeIn 3s ease;
+}
+
+/* Neon Glow Animation */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff, 0 0 30px #00ccff, 0 0 40px #00ccff;
+    }
+    50% {
+        text-shadow: 0 0 20px #00ccff, 0 0 30px #00ccff, 0 0 50px #00ccff, 0 0 70px #00ccff;
+    }
+    100% {
+        text-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff, 0 0 30px #00ccff, 0 0 40px #00ccff;
+    }
+}
+
+/* Fade-in Effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive Text */
+@media (max-width: 768px) {
+    .coming-soon-text {
+        font-size: 3rem;
+        letter-spacing: 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    .coming-soon-text {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+}
