@@ -353,62 +353,6 @@ body {
     background-size: cover;
 }
 
-/* Coming Soon Text */
-.coming-soon-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    text-align: center;
-    color: white;
-}
-
-.coming-soon-text {
-    font-size: 5rem;
-    color: #00ccff;
-    text-transform: uppercase;
-    letter-spacing: 8px;
-    animation: glow 2s ease-in-out infinite, fadeIn 3s ease;
-}
-
-/* Neon Glow Animation */
-@keyframes glow {
-    0% {
-        text-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff, 0 0 30px #00ccff, 0 0 40px #00ccff;
-    }
-    50% {
-        text-shadow: 0 0 20px #00ccff, 0 0 30px #00ccff, 0 0 50px #00ccff, 0 0 70px #00ccff;
-    }
-    100% {
-        text-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff, 0 0 30px #00ccff, 0 0 40px #00ccff;
-    }
-}
-
-/* Fade-in Effect */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-/* Responsive Text */
-@media (max-width: 768px) {
-    .coming-soon-text {
-        font-size: 3rem;
-        letter-spacing: 4px;
-    }
-}
-
-@media (max-width: 480px) {
-    .coming-soon-text {
-        font-size: 2rem;
-        letter-spacing: 2px;
-    }
-}
 /* General Styling */
 body {
     margin: 0;
@@ -441,7 +385,7 @@ body {
     background-size: cover;
 }
 
-/* Coming Soon Text */
+/* Coming Soon Container */
 .coming-soon-container {
     display: flex;
     flex-direction: column;
@@ -452,24 +396,42 @@ body {
     color: white;
 }
 
+/* Super Fancy Neon Animated "Coming Soon" Text */
 .coming-soon-text {
     font-size: 5rem;
-    color: #00ccff;
-    text-transform: uppercase;
+    background: linear-gradient(45deg, #00ccff, #00ffcc, #ff00ff, #ffcc00);
+    background-size: 400% 400%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: neon-glow 1.5s infinite alternate, color-shift 10s infinite ease;
     letter-spacing: 8px;
-    animation: glow 2s ease-in-out infinite, fadeIn 3s ease;
+    text-transform: uppercase;
+    text-shadow: 0 0 20px #00ccff, 0 0 30px #00ffcc, 0 0 40px #ff00ff, 0 0 50px #ffcc00;
+    position: relative;
+    z-index: 1;
 }
 
 /* Neon Glow Animation */
-@keyframes glow {
+@keyframes neon-glow {
     0% {
-        text-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff, 0 0 30px #00ccff, 0 0 40px #00ccff;
-    }
-    50% {
-        text-shadow: 0 0 20px #00ccff, 0 0 30px #00ccff, 0 0 50px #00ccff, 0 0 70px #00ccff;
+        text-shadow: 0 0 20px #00ccff, 0 0 30px #00ffcc, 0 0 40px #ff00ff, 0 0 50px #ffcc00;
     }
     100% {
-        text-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff, 0 0 30px #00ccff, 0 0 40px #00ccff;
+        text-shadow: 0 0 40px #00ccff, 0 0 50px #00ffcc, 0 0 60px #ff00ff, 0 0 70px #ffcc00;
+    }
+}
+
+/* Color Shift Animation */
+@keyframes color-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }
 
