@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft SMP Chat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chat-container">
+        <h1 class="title">MineZoneSmpS2</h1>
+        <div id="chatbox" class="chat-box">
+            <!-- Chat messages will appear here -->
+        </div>
+    </div>
+
+    <script>
+        const ws = new WebSocket('ws://your-server-ip:3000');
+
+        ws.onmessage = (event) => {
+            const chatbox = document.getElementById('chatbox');
+            const message = document.createElement('div');
+            message.classList.add('chat-message');
+            message.textContent = event.data;
+            chatbox.appendChild(message);
+            chatbox.scrollTop = chatbox.scrollHeight; // Auto-scroll to the latest message
+        };
+
+        ws.onopen = () => {
+            console.log('Connected to WebSocket server');
+        };
+
+        ws.onclose = () => {
+            console.log('Disconnected from WebSocket server');
+        };
+    </script>
+</body>
+</html>
